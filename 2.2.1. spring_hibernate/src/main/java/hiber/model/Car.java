@@ -1,6 +1,5 @@
 package hiber.model;
 
-
 import javax.persistence.*;
 
 @Entity
@@ -21,6 +20,7 @@ public class Car {
     @JoinColumn(name = "id", referencedColumnName = "id")
     private User user;
 
+
     public Car() {
     }
 
@@ -28,6 +28,7 @@ public class Car {
         this.model = model;
         this.series = series;
     }
+
 
     public User getUser() {
         return user;

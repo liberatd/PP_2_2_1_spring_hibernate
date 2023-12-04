@@ -12,7 +12,6 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-
 import javax.sql.DataSource;
 import java.util.Properties;
 
@@ -23,8 +22,13 @@ import java.util.Properties;
 @ComponentScan(value = "hiber")
 public class AppConfig {
 
+   final private Environment env;
+
    @Autowired
-   private Environment env;
+   public AppConfig (Environment env) {
+      this.env = env;
+   }
+
 
    @Bean
    public DataSource getDataSource() {
