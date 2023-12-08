@@ -27,7 +27,7 @@ public class MainApp {
       users.forEach(System.out::println);
 
       User user = userService.getUserByCar("Hyundai", 40);
-      System.out.println(user.toString());
+      System.out.println(user);
 
       context.close();
    }
